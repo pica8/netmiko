@@ -47,6 +47,8 @@ from netmiko.huawei import HuaweiSSH, HuaweiVrpv8SSH
 from netmiko.ipinfusion import IpInfusionOcNOSSSH, IpInfusionOcNOSTelnet
 from netmiko.juniper import JuniperSSH, JuniperTelnet
 from netmiko.juniper import JuniperFileTransfer
+from netmiko.pica8 import pica8SSH, pica8Telnet
+from netmiko.pica8 import pica8FileTransfer
 from netmiko.linux import LinuxSSH, LinuxFileTransfer
 from netmiko.mellanox import MellanoxSSH
 from netmiko.mrv import MrvOptiswitchSSH
@@ -124,6 +126,8 @@ CLASS_MAPPER_BASE = {
     'ipinfusion_ocnos': IpInfusionOcNOSSSH,
     'juniper': JuniperSSH,
     'juniper_junos': JuniperSSH,
+    'pica8': pica8SSH,
+    'pica8_picos': pica8SSH,
     'linux': LinuxSSH,
     'mellanox': MellanoxSSH,
     'mrv_optiswitch': MrvOptiswitchSSH,
@@ -150,6 +154,7 @@ FILE_TRANSFER_MAP = {
     'cisco_xe': CiscoIosFileTransfer,
     'cisco_xr': CiscoXrFileTransfer,
     'juniper_junos': JuniperFileTransfer,
+    'pica8_picos': pica8FileTransfer,
     'linux': LinuxFileTransfer,
 }
 
@@ -173,6 +178,7 @@ CLASS_MAPPER['apresia_aeos_telnet'] = ApresiaAeosTelnet
 CLASS_MAPPER['arista_eos_telnet'] = AristaTelnet
 CLASS_MAPPER['brocade_fastiron_telnet'] = RuckusFastironTelnet
 CLASS_MAPPER['brocade_netiron_telnet'] = ExtremeNetironTelnet
+CLASS_MAPPER['pica8_picos_telnet'] = pica8Telnet
 CLASS_MAPPER['calix_b6_telnet'] = CalixB6Telnet
 CLASS_MAPPER['cisco_ios_telnet'] = CiscoIosTelnet
 CLASS_MAPPER['dell_dnos6_telnet'] = DellDNOS6Telnet
